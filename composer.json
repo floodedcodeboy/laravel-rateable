@@ -1,5 +1,5 @@
 {
-    "name": "willvincent/laravel-rateable",
+    "name": "floodedcodeboy/laravel-rateable",
     "description": "Allows multiple models to be rated with a fivestar like system.",
     "keywords": [
         "laravel",
@@ -10,12 +10,10 @@
         "laravel 5"
     ],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Will Vincent",
-            "email": "tcindie@gmail.com"
-        }
-    ],
+    "authors": [{
+        "name": "Will Vincent",
+        "email": "tcindie@gmail.com"
+    }],
     "require": {
         "php": ">=5.4",
         "illuminate/support": "~5.0",
@@ -30,7 +28,7 @@
             "src/commands"
         ],
         "psr-4": {
-            "willvincent\\Rateable\\": "src/Rateable"
+            "floodedcodeboy\\Rateable\\": "src/Rateable"
         }
     }
 }
