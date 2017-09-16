@@ -11,10 +11,10 @@ Provides a trait to allow rating of multiple models within your app for Laravel 
 Ratings could be fivestar style, or simple +1/-1 style.
 
 # Installation
-Edit your project's composer.json file to require `willvincent/laravel-rateable`.
+Edit your project's composer.json file to require `floodedcodeboy/laravel-rateable`.
 ````
 "require": {
-  "willvincent/laravel-rateable": "~1.0"
+  "floodedcodeboy/laravel-rateable": "~1.0"
 }
 ````
 
@@ -23,14 +23,14 @@ Next, update Composer from the terminal.
 composer update
 ````
 
-As with most Laravel packages you'll need to register Rateable *service provider*. In your `config/app.php` add `'willvincent\Rateable\RateableServiceProvider'` to the end of the `$providers` array.
+As with most Laravel packages you'll need to register Rateable *service provider*. In your `config/app.php` add `'floodedcodeboy\Rateable\RateableServiceProvider'` to the end of the `$providers` array.
 ````php
 'providers' => [
 
     Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
     Illuminate\Auth\AuthServiceProvider::class,
     ...
-    willvincent\Rateable\RateableServiceProvider::class,
+    floodedcodeboy\Rateable\RateableServiceProvider::class,
 
 ],
 ````
@@ -53,7 +53,7 @@ You need to set on your model that it is rateable.
 ````php
 <?php namespace App;
 
-use willvincent\Rateable\Rateable;
+use floodedcodeboy\Rateable\Rateable;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -70,7 +70,7 @@ First, to add a rating to your model:
 ````php
 $post = Post::first();
 
-$rating = new willvincent\Rateable\Rating;
+$rating = new floodedcodeboy\Rateable\Rating;
 $rating->rating = 5;
 $rating->user_id = \Auth::id();
 
@@ -107,7 +107,7 @@ $post = Post::first();
 // they use the Auth facade to fetch the current user's id.
 
 
-dd($post->userAverageRating); 
+dd($post->userAverageRating);
 
 dd($post->userSumRating);
 ````

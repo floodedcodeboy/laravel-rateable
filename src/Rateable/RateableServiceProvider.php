@@ -1,4 +1,4 @@
-<?php namespace willvincent\Rateable;
+<?php namespace floodedcodeboy\Rateable;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,7 +20,7 @@ class RateableServiceProvider extends ServiceProvider
         $this->commands('command.rateable.migration');
         $this->app->bind('command.rateable.migration', function ($app) {
             return new MigrationCommand();
-        }, TRUE);
+        }, true);
     }
 
     /**

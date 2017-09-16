@@ -1,4 +1,4 @@
-<?php namespace willvincent\Rateable;
+<?php namespace floodedcodeboy\Rateable;
 
 use Config;
 use Illuminate\Database\Eloquent\Model;
